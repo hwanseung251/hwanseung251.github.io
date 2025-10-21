@@ -1,0 +1,6 @@
+
+#상단 전환 버튼 추가하는 곳
+# Dates 항목 제거, Tags만 남김
+- type: tags
+  title: Tags
+  url: /tags/

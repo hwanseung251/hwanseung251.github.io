@@ -1,0 +1,106 @@
+.avatar-image {
+  /* Single source of truth for avatar sizing to avoid conflicting rules */
+  display: block;
+  margin: 0 auto 10px auto;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  /* Responsive square size: up to 200px, or 36vw on small screens */
+  width: min(200px, 36vw);
+  height: min(200px, 36vw);
+  max-width: 200px;
+}
+.sidebar-avatar-wrap {
+  margin-bottom: 20px;
+}
+
+.sidebar-avatar {
+  /* fallback container; avatar-image handles sizing */
+  display: block;
+  margin: 0 auto 10px auto;
+}
+// Sidebar
+//
+// Styles for the sidebar.
+
+.masthead {
+  text-align: center;
+  margin: auto;
+  width: 100%;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+
+
+
+
+
+.masthead-title {
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 900;
+
+  a:hover,
+  a:focus {
+    color: var(--link-hover-color);
+  }
+}
+
+.masthead-tagline {
+  padding: 0;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+  opacity: .7;
+}
+
+.navigation-list {
+  margin-top: var(--spacer-2);
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-item {
+  display: block;
+  margin-bottom: var(--spacer);
+}
+
+.navigation-item a {
+  background: transparent;
+  color: inherit;
+  letter-spacing: 0.05em;
+  font-size: 90%;
+  border-bottom: 2px solid;
+  border-color: inherit;
+
+  &:hover,
+  &:focus {
+    color: var(--link-hover-color);
+  }
+}
+
+.social {
+  margin-top: var(--spacer-2);
+  font-size: 150%;
+  white-space: normal;
+  line-height: .5;
+}
+
+.social-icon {
+  padding: var(--spacer);
+  &:hover,
+  &:focus {
+    color: var(--link-hover-color);
+    background-color: transparent;
+  }
+}
+
+/* Removed other duplicate/overriding avatar rules to prevent squishing */

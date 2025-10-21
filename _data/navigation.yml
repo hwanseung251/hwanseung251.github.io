@@ -1,0 +1,8 @@
+
+#좌측 메뉴바 생성
+- title: About
+  url: /about/
+- title: Logs
+  url : /logs/
+- title: All posts
+  url: /dates/

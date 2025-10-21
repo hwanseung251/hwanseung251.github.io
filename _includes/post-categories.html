@@ -1,0 +1,10 @@
+<div class="post-tags-section">
+  <i class="post-tags-icon fas fa-folder"></i>
+  <ul class="post-tags">
+    {%- for category in page.categories -%}
+      <li>
+        <a class="post-tag" href="/categories/#{{ category | slugify }}">{{ category }}</a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>

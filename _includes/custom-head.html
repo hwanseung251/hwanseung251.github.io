@@ -1,0 +1,33 @@
+{% comment %}
+  Placeholder to allow defining custom head, in principle, you can add anything here, e.g. favicons:
+
+  1. Head over to https://realfavicongenerator.net/ to add your own favicons.
+  2. Customize default _includes/custom-head.html in your source directory and insert the given code snippet.
+{% endcomment %}
+
+<style>
+  /* Force light color scheme for all users regardless of their OS/browser preference */
+  :root { color-scheme: light; }
+
+  /* Ensure CSS variables use light values even when prefers-color-scheme is dark */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --body-color: var(--gray-700);
+      --body-bg: #fff;
+      --heading-color: var(--gray-900);
+      --link-color: var(--blue);
+      --link-hover-color: #1c7ed6;
+      --border-color: var(--gray-300);
+      --code-bg: #fbf1c7;
+    }
+  }
+</style>
+
+<!-- MathJax: render LaTeX math on the page -->
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>

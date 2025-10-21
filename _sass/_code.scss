@@ -1,0 +1,82 @@
+// Code
+//
+// Inline and block-level code snippets. Includes tweaks to syntax highlighted
+// snippets from Pygments/Rouge and Gist embeds.
+
+code,
+pre {
+  font-family: var(--code-font);
+}
+
+code {
+  font-size: 85%;
+}
+
+// Inline code (single backticks) - make it look like a rounded light-gray pill
+code {
+  background-color: var(--gray-100);
+  color: var(--code-color);
+  padding: 0.15em 0.4em;
+  border: 1px solid var(--border-color);
+  border-radius: calc(var(--border-radius) * 1.5);
+  vertical-align: baseline;
+  white-space: normal;
+}
+
+// Reset code styling when inside a fenced block/pre so that inline-style
+// (pill) doesn't apply to entire code lines produced by syntax highlighters.
+pre code,
+.highlight code {
+  background: transparent;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  display: block;
+  color: inherit;
+  white-space: pre; // preserve whitespace inside fenced blocks
+}
+
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: var(--spacer-3);
+  overflow: auto;
+}
+
+.highlight {
+  padding: var(--spacer);
+  margin-bottom: var(--spacer);
+  background-color: var(--code-bg);
+  border-radius: var(--border-radius);
+
+  pre {
+    margin-bottom: 0;
+  }
+
+    // Keep padding for fenced code blocks. Previously a nested .highlight rule
+    // removed padding for inner highlights (used by some renderers) which
+    // made fenced code appear unstyled. Removing that nested override fixes
+    // fenced (``` ``` ) blocks while inline `code` remains a pill.
+}
+
+.rouge-table {
+  margin-bottom: 0;
+  font-size: 100%;
+
+  &,
+  td,
+  th {
+    border: 0;
+  }
+
+  .gutter {
+    vertical-align: top;
+    user-select: none;
+    opacity: .25;
+  }
+}
+
+// Gist via GitHub Pages
+.gist .markdown-body {
+  padding: 15px !important;
+}

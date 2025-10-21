@@ -1,0 +1,10 @@
+<div class="post-tags-section">
+  <i class="post-tags-icon fas fa-clipboard-list"></i>
+  <ul class="post-tags">
+    {%- for log in page.logs -%}
+      <li>
+        <a class="post-tag" href="/logs/#{{ log | slugify }}">{{ log }}</a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>

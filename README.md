@@ -1,0 +1,2 @@
+- Tag 를 쓰면 Trend & Insight 란으로
+- Categories 를 쓰면 Notion 란으로
