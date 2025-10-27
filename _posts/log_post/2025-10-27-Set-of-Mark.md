@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'API로 데이터를 불러와보자'
+title: 'Set of Mark'
 date: 2025-10-27 16:32 +0800
 logs: [AI Challenge]
 toc: True
