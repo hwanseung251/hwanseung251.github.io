@@ -10,7 +10,7 @@ toc: True
 Valid를 예측하고 어떤 문제를 틀리는가를 확인해보면,,, **사실 사람이 풀어도 틀릴 가능성이 있는 문제**가 대부분이었다.
 
 그런데 아래 예시는 좀 아쉬웠다.\
-![틀린예시](./images/valid_wrong.png)
+![틀린예시]({{ '/assets/images/valid_wrong.png' | relative_url }})
 
 **이 정돈 맞춰줘야하는거 아닌가?** 라는 생각이 들었고, 모델에 어떤 `힌트`를 줄 필요가 있겠다라는 생각이 들었다.
 
@@ -47,8 +47,8 @@ model = SAM("sam2_t.pt")
 
 ## Output
 <p align="center">
-  <img src="./images/som예시2.png" width="45%" />
-  <img src="./images/som예시1.png" width="45%" />
+  <img src="{{ '/assets/images/som예시2.png' | relative_url }}" width="45%" />
+  <img src="{{ '/assets/images/som예시1.png' | relative_url }}" width="45%" />
 </p>
 
 - Public 점수를 확인한 결과, 성능 향상은 아주 미세한 수준에 그쳤다.
@@ -59,12 +59,12 @@ model = SAM("sam2_t.pt")
 
 ## `+@`세부 세그멘테이션 까지 5개만 추가 적용해보았다.
 - 프로젝트는 끝이 났지만,, 아쉬움으로 남아 일부 데이터로만 적용해보았다\
-![1](./images/som보완.png)
-![2](./images/som보완2.png)
-![3](./images/som보완3.png)
-![4](./images/som보완4.png)
-![5](./images/som보완5.png)
+![1]({{ '/assets/images/som보완.png' | relative_url }})
+![2]({{ '/assets/images/som보완2.png' | relative_url }})
+![3]({{ '/assets/images/som보완3.png' | relative_url }})
+![4]({{ '/assets/images/som보완4.png' | relative_url }})
+![5]({{ '/assets/images/som보완5.png' | relative_url }})
 
-- 조금 아쉽지만 확실히 모델에게 힌트를 줄 수 있을 것 같다는 느낌이 든다.
+조금 아쉽지만 확실히 모델에게 힌트를 줄 수 있을 것 같다는 느낌이 든다.
 
 끝.
